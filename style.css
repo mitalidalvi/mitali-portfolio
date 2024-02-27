@@ -1,0 +1,1586 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+  transition: all 5s;
+}
+
+body {
+  background-color:rgba(3, 3, 33, 0.996);
+  overflow-x: hidden;
+}
+
+/* =================== Nav-Bar and Hero Page Section Mobile View ============== */
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 15px 10%;
+  border-bottom: 2px solid rgba(62, 61, 61, 0.681);
+  background-color: #1a0732;
+  justify-content: space-between;
+  z-index: 100;
+}
+header .logo1 {
+  color: #FFF;
+  font-size: 15px;
+  font-weight: bold;
+  display: flex;
+}
+.logo1 .fa-code {
+  font-size: 13px;
+  padding: 5px 4px 0px;
+}
+.logo1 .hamburger-menu {
+  display: block;
+  color: white;
+  margin-left: auto;
+}
+.logo1:hover {
+  color: rgb(245, 213, 68);
+}
+
+header nav {
+  overflow: hidden;
+  height: 0;
+  transition: 0.5s;
+  left: 0;
+  right: 0;
+}
+nav.active {
+  height: 260px;
+}
+nav .nav-txt {
+  display: flex;
+  flex-direction: column;
+  /* display: inline-block; */
+  color: #FFF;
+  font-size: 15px;
+  text-decoration: none;
+  font-weight: 500;
+  margin: 12px auto 12px;
+  transition: 0.4s;
+  align-items: center;
+  opacity: 0;
+}
+nav.active .nav-txt {
+  opacity: 1;
+  padding-bottom: 7px;
+  margin: 12px 20%;
+} 
+nav.active .nav-txt:hover {
+  border-bottom: 4px solid #261fcb;
+  border-radius: 9px;
+  margin: 12px 20%;
+}
+main {
+
+}
+main #Home {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  padding-top: 48px;
+}
+#Home .leftSection {
+  width: 195px;
+}
+.leftSection .name-txt {
+  color: #fff;
+  font-weight: 530;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+.leftSection .profession-txt {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 10px 0;
+  width: 250px;
+}
+.profession-txt .typed-txt {
+  color: rgb(245, 213, 68);
+}
+.leftSection .btn1 {
+  position: relative;
+  padding: 7px 10px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #7d2ae8;
+  transition: all 0.2s ease;
+  font-size: 11px;
+}
+.btn1 .down-arrow {
+  margin-left: 2px;
+  color: #fff;
+}
+.btn1:active {
+  transform: scale(0.96);
+}
+
+.btn1:before,
+.btn1:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.btn1:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+      background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.btn1:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+    radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+#Home .rightSection {
+  /* margin: auto; */
+}
+.rightSection .girl-img {
+  width: 260px;
+  border-radius: 100px;
+}
+
+/* =================== Nav-Bar and Hero Page Section in web View =================*/
+
+@media (min-width: 576px) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (min-width: 991px) {
+  body {
+    overflow-x: hidden;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 10%;
+    background-color: #1a0732;
+    border: none;
+    border-bottom: 2px solid rgba(62, 61, 61, 0.681);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+  }
+  header .logo1 {
+    color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .logo1:hover {
+    color: rgb(245, 213, 68);
+  }
+  .logo1 .fa-code {
+    font-size: 20px;
+    padding: 7px 8px 0px;
+  }
+  .logo1 .hamburger-menu {
+    display: none;
+  }
+  header nav {
+    height: 50px;
+  }
+  nav.active {
+    padding-right: 4px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+  }
+  nav .nav-txt {
+    display: inline-block;
+    color: #FFF;
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    cursor: pointer;
+    transition: 0.4s;
+    opacity: 1;
+  }
+  nav.active .nav-txt {
+    margin: 0 0 0 35px;
+    padding: 0;
+  }
+  nav.active .nav-txt:hover {
+    border-bottom: none;
+    margin: 0 0 0 35px;
+    padding-bottom: 0;
+  }
+  .nav-txt:hover,
+  .nav-txt.active {
+    transform: scale(1.1);
+    color: rgb(138, 176, 246);
+  }
+  main #Home{
+    display: flex;
+    flex-direction: row;
+    margin: 15vh 0;
+    color: white;
+    padding-top: 0;
+  }
+  #Home .leftSection {
+    width: 50%;
+    margin-left: auto;
+  }
+  .leftSection .name-txt {
+      font-size: 50px;
+      font-weight: 700;
+      word-spacing: 5px;
+      letter-spacing: 3px;
+  }
+  .leftSection .profession-txt {
+      font-size: 30px;
+      font-weight: 500;
+      padding-bottom: 25px;
+      padding-top: 15px;
+      letter-spacing: 2px;
+      width: 100%;
+  }
+  .profession-txt .typed-txt {
+    color: rgb(245, 213, 68);
+  }
+  .leftSection a {
+    text-decoration: none;
+  }
+  .leftSection .btn1 {
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    background-color: #7d2ae8;
+    transition: all 0.2s ease;
+    font-size: 15px;
+  }
+  .btn1 .down-arrow {
+    margin-left: 2px;
+    color: #fff;
+  }
+  .btn1:active {
+      transform: scale(0.96);
+  }
+    
+  .btn1:before,
+  .btn1:after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+  }
+    
+  .btn1:hover:before {
+      top: -70%;
+      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+      background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+      background-position: 50% 120%;
+      animation: greentopBubbles 0.6s ease;
+  }
+    
+  @keyframes greentopBubbles {
+      0% {
+          background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+          40% 90%, 55% 90%, 70% 90%;
+      }
+    
+      50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+          50% 50%, 65% 20%, 90% 30%;
+      }
+    
+      100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+          50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+      }
+  }
+    
+  .btn1:hover::after {
+      bottom: -70%;
+      background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+      background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+      background-position: 50% 0%;
+      animation: greenbottomBubbles 0.6s ease;
+  }
+    
+    @keyframes greenbottomBubbles {
+      0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+          70% -10%, 70% 0%;
+      }
+    
+      50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+          105% 0%;
+      }
+    
+      100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+          110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+      }
+    }
+  #Home .rightSection {
+      margin-right: auto;
+  }
+  .rightSection .girl-img {
+    width: 450px;
+    cursor: pointer;
+  }
+  .girl-img:hover {
+    transition: 0.1s;
+  }
+}
+
+/* ===================== About Me in Mobile view  ====================== */
+
+main #about-me {
+  margin: 30px 16px;
+  border: 1px solid #1a0732;
+  background-color: #1a0732;
+  border-radius: 16px;
+}
+#about-me .about {
+  color: rgb(245, 213, 68);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+.about .about-logo {
+  margin-right: 6px;
+  color: rgb(138, 176, 246);
+}
+#about-me .photo-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-about .mitali-photo {
+  width: 300px;
+}
+.mitali-photo:hover {
+  filter: drop-shadow(5px 5px 10px #555);
+}
+.photo-about .personal-info {
+  padding: 0 10px;
+}
+.personal-info .profile-title {
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 8px;
+  margin-top: 24px;
+  color: #FFF;
+}
+.personal-info .objective {
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #fff;
+  font-size: 12px;
+  text-wrap: wrap;
+  width: 100%;
+}
+.personal-info .info-list {
+  
+}
+.info-list .li1 {
+
+}
+.li1 ul {
+  list-style-type: none;
+}
+ul span {
+  color: rgb(163, 163, 28);
+  display: flex;
+}
+span .fa-angle-right {
+  font-size: 12px;
+  margin-right: 5px;
+  margin-top: 3px;
+  color: rgb(245, 213, 68);
+  font-weight: bold;
+}
+ul .info {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+.info strong {
+  margin-right: 10px;
+}
+
+/* ===================== About Me in Web view  ====================== */
+
+@media (min-width: 991px) {
+  main #about-me {
+    border: 1px solid #1a0732;
+    background-color: #1a0732;
+    border-radius: 40px;
+    padding: 35px;
+    margin: 77px;
+  }
+  #about-me .about {
+    color: rgb(245, 213, 68);
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 21px;
+  }
+  .about .about-logo {
+    margin-right: 10px;
+    color: rgb(138, 176, 246);
+  }
+  #about-me .photo-about {
+    display: flex;
+    flex-direction: row;
+  }
+  .photo-about .mitali-photo {
+    width: 300px;
+    cursor: pointer;
+  }
+  .mitali-photo:hover {
+    filter: drop-shadow(5px 5px 10px #555);
+  }
+  .photo-about .personal-info {
+    width: 100%;
+    text-wrap: wrap;
+  }
+  .personal-info .profile-title {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 26px;
+  }
+  .personal-info .objective {
+    margin-bottom: 30px;
+    text-wrap: wrap;
+    width: 100%;
+    font-size: 16px;
+    font-style: italic;
+  }
+  .personal-info .info-list {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+  }
+  .info-list .li1 {
+    padding: 0 12px;
+    margin-right: auto;
+  }
+  .li1 ul {
+    list-style-type: none;
+  }
+  ul span {
+    display: flex;
+  }
+  span .fa-angle-right {
+    font-size: 16px;
+    margin-right: 5px;
+    margin-top: 3px;
+    color: rgb(245, 213, 68);
+    font-weight: bold;
+  }
+  ul .info {
+    font-size: 16px;
+  }
+  .info strong {
+  }
+  
+}
+
+
+/* ======================== Skills in Mobile View ======================== */
+
+main #my-skills {
+  margin: 0 16px 30px;
+}
+#my-skills .skills {
+  color: rgb(245, 213, 68);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+.skills .skills-logo {
+  margin-right: 6px;
+  color: rgb(138, 176, 246);
+}
+#my-skills .flex-skill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-skill .skill {
+  flex: 0 0 46%;
+  max-width: 46%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #312e2e;
+  background-color: #312e2e;
+  border-radius: 12px;
+  margin: 5px;
+  padding-top: 10px;
+}
+.skill:hover {
+  background-color: rgb(24 23 23);
+  box-shadow: 5px 5px 5px #555;
+}
+.skill .logo-img {
+  /* width: 46px; */
+  height: 46px;
+}
+.skill .skill-heading {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0 10px;
+}
+
+
+#my-skills .python-libraries {
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #312e2e;
+  background-color: #312e2e;
+  border-radius: 12px;
+  margin: 5px auto;
+  align-items: center;
+  height: 94px;
+  width: 46%;
+  padding-top: 10px;
+}
+.python-libraries:hover {
+  background-color: rgb(24 23 23);
+  box-shadow: 5px 5px 10px #555;
+}
+.python-libraries .tooltip-1,
+.python-libraries .tooltip-2,
+.python-libraries .tooltip-3,
+.python-libraries .tooltip-4 {
+  position: absolute;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  border: 1px solid #312e2e;
+  background-color: #312e2e;
+  border-radius: 8px;
+  padding-top: 8px;
+  width: 41%;
+  height: 41px;
+}
+
+.tooltip-1 .logo0-img,
+.tooltip-2 .logo0-img,
+.tooltip-3 .logo0-img,
+.tooltip-4 .logo0-img {
+  width: 25px;
+  height: 25px;
+}
+.tooltip-1 .lib-heading1,
+.tooltip-2 .lib-heading2,
+.tooltip-3 .lib-heading3,
+.tooltip-4 .lib-heading4 {
+  display: none;
+}
+
+.tooltip-1 {
+  top: 0%;
+  left: 5%;
+  width: 200px;
+}
+.tooltip-2 {
+  left: 100%;
+}
+.tooltip-3 {
+  left: 0;
+}
+.tooltip-4 {
+  top: 0%;
+  left: 98%;
+  width: 200px;
+}
+.python-libraries:hover .tooltip-1 {
+  top: 55%;
+  left: -28%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.python-libraries:hover .tooltip-2 {
+  left: -28%;
+  top: 5px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.python-libraries:hover .tooltip-3 {
+  left: 131%;
+  top: 5px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.python-libraries:hover .tooltip-4 {
+  top: 55%;
+  left: 131%;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.python-lib .logo1-img {
+  width: 40px;
+}
+.python-lib .lib-heading {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 10px 0 10px;
+}
+
+
+/* ======================== Skills in Web View =========================== */
+
+@media (min-width: 576px) {
+  main #my-skills {
+    margin: 0 77px 157px;
+  }
+  #my-skills .skills {
+    color: rgb(245, 213, 68);
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 21px;
+  }
+  .skills .skills-logo {
+    margin-right: 10px;
+    color: rgb(138, 176, 246);
+  }
+  #my-skills .flex-skill {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flex-skill .skill {
+    flex: 0 0 20%;
+    max-width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #312e2e;
+    background-color: #312e2e;
+    border-radius: 16px;
+    margin: 8px;
+    padding-top: 18px;
+  }
+  .skill:hover {
+    background-color: rgb(24 23 23);
+    box-shadow: 5px 5px 10px #555;
+  }
+  .skill .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+  .skill .skill-heading {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 0;
+  }
+  #my-skills .python-libraries {
+    position: relative;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #312e2e;
+    background-color: #312e2e;
+    border-radius: 16px;
+    margin: 8px auto;
+    padding-top: 18px;
+    align-items: center;
+    width: 20%;
+    height: 138px;
+  }
+  .python-libraries:hover {
+    background-color: rgb(24 23 23);
+    box-shadow: 5px 5px 10px #555;
+  }
+  .python-libraries .tooltip-1,
+  .python-libraries .tooltip-2,
+  .python-libraries .tooltip-3,
+  .python-libraries .tooltip-4 {
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #312e2e;
+    background-color: #312e2e;
+    border-radius: 16px;
+    padding-top: 18px;
+    align-items: center;
+    width: 87%;
+    height: 133px;
+  }
+  
+  .tooltip-1 .logo0-img,
+  .tooltip-2 .logo0-img,
+  .tooltip-3 .logo0-img,
+  .tooltip-4 .logo0-img {
+    width: 60px;
+    height: 60px;
+  }
+  .tooltip-1 .lib-heading1,
+  .tooltip-2 .lib-heading2,
+  .tooltip-3 .lib-heading3,
+  .tooltip-4 .lib-heading4 {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 0;
+    width: 203%;
+  }
+
+  .tooltip-1 {
+    top: 0%;
+    left: 5%;
+    width: 200px;
+  }
+  .tooltip-2 {
+    left: 100%;
+  }
+  .tooltip-3 {
+    left: 0;
+  }
+  .tooltip-4 {
+    top: 0%;
+    left: 98%;
+    width: 200px;
+  }
+  .python-libraries:hover .tooltip-1 {
+    top: 112%;
+    left: 5%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .python-libraries:hover .tooltip-2 {
+    left: -50%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .python-libraries:hover .tooltip-3 {
+    left: 150%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .python-libraries:hover .tooltip-4 {
+    top: 112%;
+    left: 99%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .python-lib .logo1-img {
+    width: 60px;
+  }
+  .python-lib .lib-heading {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 16px 0;
+  }
+  
+}
+
+/* ========================= Education in Mobile View ========================= */
+
+main #my-education {
+  margin: 0 16px 30px;
+}
+#my-education .edu {
+  color: rgb(245, 213, 68);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+.edu .edu-logo {
+  margin-right: 6px;
+  color: rgb(138, 176, 246);
+}
+#my-education .hsc-gra {
+}
+.hsc-gra .grade {
+  display: flex;
+  flex-direction: column;
+  margin: 13px 0;
+}
+.grade .u_image {
+  border-radius: 8px 8px 0px 0px;
+}
+.grade .u_image1 {
+  border-radius: 8px 8px 0 0;
+}
+.grade .clg {
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 12px;
+}
+.clg .degree {
+  color: rgba(7, 7, 97, 0.996);
+  font-size: 16px;
+  font-weight: 600;
+}
+.clg .university {
+  color: black;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.clg .year {
+  color: rgb(2, 114, 2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* ========================= Education in Web View =========================== */
+
+@media (min-width: 576px) {
+  main #my-education {
+    margin-bottom: 77px;
+  }
+  #my-education .edu {
+    color: rgb(245, 213, 68);
+    font-size: 32px;
+    font-weight: bold;
+    padding: 0 0 21px;
+  }
+  .edu .edu-logo {
+    margin-right: 10px;
+    color: rgb(138, 176, 246);
+  }
+  #my-education .hsc-gra {
+  }
+  .hsc-gra .grade {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 18px 0;
+  }
+  .grade .u_image {
+    border-radius: 10px 0 0 10px;
+    height: 190px;
+  }
+  .grade .u_image1 {
+    border-radius: 10px 0 0 10px;
+    width: 314px;
+    height: 190px;
+  }
+  .grade .clg {
+    background-color: #fff;
+    border-radius: 0 10px 10px 0;
+    padding: 20px 18px;
+    height: 190px;
+    width: 50%;
+  }
+  .clg .degree {
+    color: rgba(7, 7, 97, 0.996);
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .clg .university {
+    color: black;
+    font-size: 16px;
+    padding: 5px 0;
+  }
+  .clg .year {
+    color: rgb(2, 114, 2);
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+}
+
+/* ========================= Projects in Mobile View ====================== */
+
+main #my-projects {
+  margin: 0 16px 30px;
+}
+#my-projects .project-heading {
+  color: rgb(245, 213, 68);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+.project-heading .pro-logo {
+  margin-right: 6px;
+  color: rgb(138, 176, 246);
+}
+#my-projects .pro-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pro-cards .card {
+  flex: 0 0 92%;
+  max-width: 92%;
+  position: relative;
+  width: 265px;
+  height: 180px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 7.5px;
+  transition: 0.5s ease;
+  color: white;
+  margin: 5px 0;
+}
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+.card:hover::after {
+  opacity: 0.25;
+}
+.card .pro-img {
+  position: absolute;
+  width: 100%;
+  height: 180px;
+}
+.card .details {
+  position: absolute;
+  /* z-index: 1; */
+  display: flex;
+  flex-direction: column;
+  transform: translateY(95%);
+  transition: all 0.5s ease;  
+  bottom: 31px;
+  color: #1a0732;
+  background-color: #fff;
+}
+.details .cardHeader {
+  text-transform: uppercase;
+  position: relative;
+  font-weight: bold;
+  transition: all 0.5s ease;
+  background-color: rgb(245, 213, 68);
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 0;
+}
+.card:hover .details {
+  transform: translateY(0%);
+  transition-delay: 0.2s;
+  bottom: 0;
+}
+.card:hover .cardHeader::after {
+  transform: translateX(-1rem);
+  transition: 0.5s ease;
+  opacity: 1;
+}
+.card .cardText {
+  font-size: 12px;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+}
+.card:hover {
+  border-radius: 8px;
+}
+
+/* ========================= Projects in Web View ====================== */
+
+@media (min-width: 576px) {
+  main #my-projects {
+    margin: 0 77px 77px;
+  }
+  #my-projects .project-heading {
+    color: rgb(245, 213, 68);
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 21px;
+  }
+  .project-heading .pro-logo {
+    margin-right: 10px;
+    color: rgb(138, 176, 246);
+  }
+  #my-projects .pro-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .pro-cards .card {
+    flex: 0 0 42%;
+    max-width: 42%;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 7.5px;
+    transition: 0.5s ease;
+    color: white;
+    margin: 10px;
+  }
+  .card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0.5;
+    transition: 0.3s ease;
+  }
+  .card:hover::after {
+    opacity: 0.25;
+  }
+  .card .pro-img {
+    position: absolute;
+    max-width: 100%;
+    height: 300px;
+  }
+  .card .details {
+    position: absolute;
+    /* z-index: 1; */
+    display: flex;
+    flex-direction: column;
+    transform: translateY(95%);
+    transition: all 0.5s ease;  
+    bottom: 40px;
+    color: #1a0732;
+    background-color: #fff;
+    width: 100%;
+  }
+  .details .cardHeader {
+    text-transform: uppercase;
+    position: relative;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    background-color: rgb(245, 213, 68);
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .card:hover .details {
+    transform: translateY(0%);
+    transition-delay: 0.2s;
+    bottom: 0;
+  }
+  .card:hover .cardHeader::after {
+    transform: translateX(-1rem);
+    transition: 0.5s ease;
+    opacity: 1;
+  }
+  .card .cardText {
+    font-size: 16px;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+  }
+  .card:hover {
+    border-radius: 15px;
+  }
+
+}
+ 
+/* ========================= Experience in Mobile View ================== */
+
+main #my-experience {
+  margin: 0 16px 30px;
+}
+#my-experience .experience-heading {
+  color: rgb(245, 213, 68);
+  text-align: center;
+  padding: 10px 0;
+  font-size: 30px;
+}
+.experience-heading .exp-logo {
+  margin-right: 6px;
+  color: rgb(138, 176, 246);
+}
+#my-experience .experience {
+  display: flex;
+}
+.experience .vr-line {
+  border-left: 4px solid rgb(138, 176, 246);
+  height: 100px;
+  position: relative;
+  margin-left: 15px;
+}
+.vr-line .fa-briefcase {
+  position: absolute;
+  color: rgba(3, 3, 33, 0.996);
+  font-size: 14px;
+  border: 3px solid rgb(245, 213, 68);
+  background-color: #fff;
+  padding: 3px 3px;
+  border-radius: 12px;
+  left: -14px;
+  top: 21px;
+} 
+.experience .box {
+  position: relative;
+  background-color: rgb(245, 213, 68);
+  margin-left: 30px;
+  margin-top: 14px;
+  width: 80%;
+  height: 68px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.box .shape {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background: rgb(245, 213, 68);
+  border: 1px solid rgb(245, 213, 68);
+  transform: rotate(45deg);
+  top: 13px;
+  left: -6px;
+}
+.box .company {
+  font-size: 16px;
+}
+.box .position {
+  font-size: 13px;
+}
+.box .date {
+  font-size: 10px;
+}
+
+/* ========================= Experience in Web View ====================== */
+
+@media (min-width: 576px) {
+  main #my-experience {
+    margin: 0 77px 77px;
+    padding: 0 6%;
+  }
+  #my-experience .experience-heading {
+    color: rgb(245, 213, 68);
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 0px;
+    padding-bottom: 21px;
+  }
+  .experience-heading .exp-logo {
+    margin-right: 10px;
+    color: rgb(138, 176, 246);
+  }
+  #my-experience .experience {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    width: 105%;
+  }
+  .experience .vr-line {
+    border-left: 5px solid rgb(138, 176, 246);
+    height: 140px;
+    position: relative;
+    margin-left: 13px;
+  }
+  .vr-line .fa-briefcase {
+    position: absolute;
+    color: rgba(3, 3, 33, 0.996);
+    font-size: 18px;
+    border: 4px solid rgb(245, 213, 68);
+    background-color: #fff;
+    padding: 4px 4px;
+    border-radius: 17px;
+    left: -19px;
+    top: 21px;
+  } 
+  .experience .box {
+    position: relative;
+    background-color: rgb(245, 213, 68);
+    margin-right: 26px;
+    margin-top: 13px;
+    margin-left: 0;
+    width: 40%;
+    height: 95px;
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  .box .shape {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: rgb(245, 213, 68);
+    border: 1px solid rgb(245, 213, 68);
+    transform: rotate(45deg);
+    top: 19px;
+    left: 98%;
+  }
+  .box .company {
+    font-size: 18px;
+  }
+  .box .position {
+    font-size: 16px;
+  }
+  .box .date {
+    font-size: 12px;
+  }
+  
+}
+
+/* ========================= Footer in mobile view ========================= */
+
+footer {
+  background-color: #1a0732;
+  background-size: cover;
+}
+footer .foo {
+  padding-left: 20px;
+}
+.foo .mitali-portfolio {
+}
+.mitali-portfolio .heading {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  padding-top: 7px;
+}
+.mitali-portfolio .txt {
+  color: #c8c5c5;
+  font-size: 12px;
+  padding: 8px 8px 15px;
+}
+.txt .hand-heart {
+  font-size: 14px;
+  color: #c8c5c5;
+}
+footer .quick-links {
+}
+.quick-links .heading {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+.quick-links .links {
+  padding: 10px 1px 15px;
+}
+.links li {
+display: flex;
+color: #fff;
+}
+li:hover {
+  color: rgb(245, 213, 68);
+}
+li .fa-circle-chevron-right {
+  margin: 5px 4px 0 3px;
+  font-size: 10px;
+}
+li .q-l {
+  color: #fff;
+  font-size: 12px;
+}
+.q-l:hover {
+  color: rgb(245, 213, 68);
+}
+footer .contact-info {
+}
+.contact-info .heading {
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+.contact-info .contact {
+  padding: 8px 1px 14px;
+  font-size: 12px;
+  color: #c8c5c5;
+  padding-left: 2px;
+}
+.contact .con {
+  padding: 3px 0;
+}
+.con .con-icon {
+  color: rgb(245, 213, 68);
+  margin-right: 6px;
+}
+.contact-info .contact-links {
+  padding-top: 15px;
+  padding-bottom: 7px;
+}
+.contact-links .link {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 17px;
+  padding: 5px 8px;
+  margin: 4px;
+}
+.link:hover {
+  background-color: transparent;
+}
+.link .link-icon {
+  color: rgb(26, 7, 50);
+  font-size: 12px;
+}
+.link-icon:hover {
+  color: rgb(245, 213, 68);
+}
+
+footer .copy-right {
+  border-top: 1px solid #353333;
+  margin: 0 14px;
+}
+.copy-right .c-r {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  padding: 4px 0 6px;
+}
+.c-r .name {
+  color: rgb(245, 213, 68);
+}
+.c-r .hand {
+  font-size: 12px;
+  margin: 0 25px;
+}
+.c-r .fa-heart {
+  color: red;
+  font-size: 10px;
+  animation: heartbeat 0.8s infinite;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1.3);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  60% {
+    transform: scale(1.3);
+  }
+}
+
+/* ========================= Footer in Web view ========================= */
+
+@media (min-width: 576px) {
+  footer {
+    padding: 20px 0 0;
+  }
+  footer .foo {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 0;
+  }
+  .foo .mitali-portfolio {
+  }
+  .mitali-portfolio .heading {
+    font-size: 23px;
+  }
+  .mitali-portfolio .txt {
+    font-size: 15px;
+    text-wrap: wrap;
+    width: 78%;
+    padding-left: 0;
+    padding-top: 12px;
+    padding-right: 0px;
+  }
+  .txt .hand-heart {
+    font-size: 17px;
+    color: #c8c5c5;
+  }
+  .foo .quick-links {
+  }
+  .quick-links .heading {
+    font-size: 23px;
+  }
+  .quick-links .links {
+  }
+  .links li {
+    cursor: pointer;
+    padding: 3px 0;
+  }
+  li .fa-circle-chevron-right {
+    font-size: 13px;
+  }
+  li .q-l {
+    font-size: 15px;
+  }
+  .foo .contact-info {
+  }
+  .contact-info .heading {
+    font-size: 23px;
+  } 
+  .contact-info .contact {
+  }
+  .contact .con {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+  .con .con-icon {
+  }
+  .contact .contact-links {
+  }
+  .contact-links .link {
+    border: 1px solid #fff;
+    border-radius: 17px;
+    padding: 10px 13px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  .link:hover {
+    background-color: transparent;
+  }
+  .link .link-icon {
+    color: rgb(26, 7, 50);
+    font-size: 16px;
+  }
+  .link-icon:hover {
+    color: rgb(245, 213, 68);
+  }
+  footer .copy-right {
+    margin: 0 8%;
+  }
+  .copy-right .c-r {
+    font-size: 14px;
+    padding: 8px 0 15px;
+  }
+  .c-r .name {
+    color: rgb(245, 213, 68);
+  }
+  .c-r .hand {
+    font-size: 16px;
+    margin: 0 40px;
+  }
+  .c-r .fa-heart {
+    color: red;
+    font-size: 13px;
+    animation: heartbeat 0.8s infinite;
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1.3);
+    }
+    30% {
+      transform: scale(1.2);
+    }
+    60% {
+      transform: scale(1.3);
+    }
+  }
+
+}
+
+
+/* ========================== Web View After 1450 Screen width ========================== */
+
+@media (min-width: 1450px) {
+  main {
+    max-width: 1280px;
+    margin: auto;
+  }
+}
+
