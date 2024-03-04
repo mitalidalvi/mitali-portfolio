@@ -1134,6 +1134,7 @@ main #my-projects {
     transition: 0.5s ease;
     color: white;
     margin: 10px;
+    cursor: pointer;
   }
   .card::after {
     content: "";
