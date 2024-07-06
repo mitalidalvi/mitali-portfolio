@@ -774,7 +774,7 @@ main #my-skills {
     box-shadow: 5px 5px 10px #555;
   }
   .skill .logo-img {
-    width: 60px;
+/*     width: 60px; */
     height: 60px;
   }
   .skill .skill-heading {
