@@ -1323,6 +1323,15 @@ main #my-experience {
     top: 19px;
     left: 98%;
   }
+  .experience .right-box {
+    left: 45.6%;
+    margin-left: 26px;
+    margin-top: 13px;
+    margin-right: 0;
+  }
+  .right-box .right-shape {
+    left: -8px;
+  }
   .box .company {
     font-size: 18px;
   }
